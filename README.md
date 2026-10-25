@@ -92,5 +92,5 @@ Scheduled fetching (cron / Celery), more assets, price alerts, Docker, deploymen
 A learning project built with AI assistance (Claude). I ran, tested and studied
 the code to understand each part, from data collection to the dashboard.
 
-
+This project is managed with Git.
 
