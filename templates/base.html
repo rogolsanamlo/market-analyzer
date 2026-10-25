@@ -1,0 +1,21 @@
+{% load static %}<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-token" content="{{ csrf_token }}">
+  <title>{% block title %}تحلیلگر بازار{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <header class="topbar">
+    <h1>تحلیلگر بازار</h1>
+    <p class="subtitle">قیمت ارز دیجیتال، دلار و طلا با نمودار و تحلیل ساده</p>
+  </header>
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+  <footer class="footer">داده‌ها از CoinGecko و TGJU گرفته می‌شود. این برنامه توصیه مالی نیست.</footer>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

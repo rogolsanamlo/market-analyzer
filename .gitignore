@@ -1,0 +1,12 @@
+.env
+venv/
+.venv/
+__pycache__/
+*.pyc
+instance/
+logs/*.log*
+!logs/.gitkeep
+.idea/
+.vscode/
+db.sqlite3
+staticfiles/

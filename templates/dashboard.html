@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="toolbar">
+  <button id="refresh-btn" class="btn">به‌روزرسانی قیمت‌ها</button>
+  <span id="status" class="status" role="status"></span>
+</div>
+
+<div id="demo-banner" class="banner" hidden>
+  داده‌های این دارایی نمونه (آزمایشی) است. با دکمه «به‌روزرسانی قیمت‌ها» داده واقعی بگیرید.
+</div>
+
+<section id="cards" class="cards" aria-label="دارایی‌ها"></section>
+
+<section class="panel">
+  <div class="panel-head">
+    <h2 id="chart-title">نمودار قیمت</h2>
+    <div class="ranges" id="ranges">
+      <button class="chip" data-days="7">۷ روز</button>
+      <button class="chip active" data-days="30">۳۰ روز</button>
+      <button class="chip" data-days="90">۹۰ روز</button>
+    </div>
+  </div>
+  <div class="chart-wrap"><canvas id="price-chart"></canvas></div>
+  <p id="empty-msg" class="empty" hidden>داده‌ای برای نمایش وجود ندارد.</p>
+</section>
+
+<section class="panel">
+  <h2>خلاصه تحلیل</h2>
+  <dl id="stats" class="stats"></dl>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
+<script src="{% static 'js/dashboard.js' %}"></script>
+{% endblock %}
